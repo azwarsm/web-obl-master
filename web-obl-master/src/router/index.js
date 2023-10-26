@@ -5,6 +5,7 @@ import home from "../pages/master/home-page.vue";
 import profile from "../pages/master/profile-page.vue";
 import Popup from "../components/DocumentList.vue";
 import login from "../pages/master/login-page.vue";
+import folder from "../pages/master/folder-page.vue";
 
 
 
@@ -34,6 +35,12 @@ const routes = [
     name: 'Popup',
     component: Popup,
   },
+  {
+    name: "Folder-page",
+    path: "/folder",
+    component: folder,
+  },
+  
 ];
 
 const router = createRouter({

@@ -85,7 +85,7 @@
         <div class="border border-gray-300 rounded-md p-[20px] h-full">
             <router-view> 
                 <div class="grid grid-cols-2 gap-4">
-                <div v-for="(document, index) in documents" :key="index" class="bg-red-800 p-4 rounded-md shadow-md hover:shadow-lg transition-transform transform hover:scale-105 relative overflow-hidden" @click="showPopup(document)">
+                <div v-for="(document, index) in documents" :key="index" class="bg-red-800 p-4 rounded-md shadow-md hover:shadow-lg transition-transform transform hover:scale-105 relative overflow-hidden" @click="goToNextPage(document)">
                 <div class="animate-wave absolute top-0 left-0 w-full h-full bg-red-800 opacity-20"></div>
                     <h2 class="text-lg font-semibold text-white relative z-10">{{ document.title }}</h2>
                     <p class="mt-2 text-gray-300 relative z-10">{{ document.content }}</p>
@@ -131,7 +131,12 @@ methods: {
     toggleDrop() {
     this.showDropDown = !this.showDropDown;
     },
-    
+    goToNextPage(document) {
+      // Implement logic to navigate to the next page when a document is clicked.
+      // You can use Vue Router or another routing mechanism for this.
+      // For example, using Vue Router:
+      this.$router.push({ name: 'Folder-page', params: { document } });
+    },
 },
 
 };

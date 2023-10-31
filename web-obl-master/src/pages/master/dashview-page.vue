@@ -16,7 +16,7 @@
                 </svg>
                 Profile
             </router-link>
-            <router-link to="/dashboard" class="inline-flex relative items-center py-[10px] px-[10px] w-full text-sm font-medium rounded-md border-gray-200 hover:bg-gray-300  hover:text-gray-800 transition duration-400 ease-in-out">
+            <router-link to="/dashview" class="inline-flex relative items-center py-[10px] px-[10px] w-full text-sm font-medium rounded-md border-gray-200 hover:bg-gray-300  hover:text-gray-800 transition duration-400 ease-in-out">
                 <svg aria-hidden="true" class="mr-2 w-[25px] h-[25px] fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z"></path>
                 </svg>
@@ -70,7 +70,7 @@
             <div v-show="showDropDown" class="absolute right-[10px] z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                 <div class="py-1 text-left" role="none">
                 <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                <a href="/" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Sign out</a>
+                <a href="/" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</a>
                 </div>
             </div>
             </div>
@@ -80,12 +80,6 @@
         <div class="border border-gray-300 rounded-md p-[20px] h-full">
             <div class="flex justify-between items-center mb-4">
                 <h1 class="text-2xl font-bold">Your Documents</h1>
-                <button class="bg-red-800 text-white px-4 py-2 rounded-md hover:bg-red-900 hover:shadow-md transition-transform transform hover:scale-105 border border-red-800" @click="navigateToPage">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                    </svg>
-                    <a >Add Project</a>
-                </button>
             </div>
                 <router-view> 
                 <div class="grid grid-cols-2 gap-4">
@@ -139,11 +133,9 @@ methods: {
       // Implement logic to navigate to the next page when a document is clicked.
       // You can use Vue Router or another routing mechanism for this.
       // For example, using Vue Router:
-      this.$router.push({ name: 'Folder-page', params: { document } });
+      this.$router.push({ name: 'Foldview-page', params: { document } });
     },
-    navigateToPage() {
-      this.$router.push('/input'); // Gunakan Vue Router untuk navigasi
-    },
+    
 },
 
 };

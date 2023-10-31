@@ -1,33 +1,64 @@
 <template>
-    <div class="bg-gray-100 min-h-screen p-4">
-      <div class="bg-white rounded-lg shadow-md p-4">
-        <h1 class="text-2xl font-semibold text-gray-800 mb-4">Dashboard</h1>
-        <div class="grid grid-cols-2 gap-4">
-          <!-- Menampilkan data -->
-          <div v-for="(item, index) in data" :key="index" class="bg-gray-200 p-4 rounded-lg">
-            <h2 class="text-lg font-semibold text-gray-700">{{ item.title }}</h2>
-            <p class="text-sm text-gray-500">{{ item.description }}</p>
-          </div>
-        </div>
+  <div class="container">
+    <div class="content">
+    
+      <div class="logo-center">
+        <img src="../master/logotelkom.png" alt="Logo" class="w-48 h-32 mx-auto mb-4">
       </div>
+   
+      <h1>Selamat Datang di TELOTIC</h1>
+      <p>Silakan pilih jenis pengguna Anda</p>
+      <div class="option" @click="redirectTo('admin')">Admin</div>
+      <div class="option" @click="redirectTo('guest')">Visitor</div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        data: [
-          { title: "Item 1", description: "Deskripsi Item 1" },
-          { title: "Item 2", description: "Deskripsi Item 2" },
-          { title: "Item 3", description: "Deskripsi Item 3" }
-        ]
-      };
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    redirectTo(userType) {
+      if (userType === 'admin') {
+        this.$router.push('/login'); // Ganti dengan rute ke halaman login admin
+      } else if (userType === 'guest') {
+        this.$router.push('/logview'); // Ganti dengan rute ke halaman login tamu
+      }
     }
-  };
-  </script>
-  
-  <style scoped>
-  /* Tambahkan gaya sesuai kebutuhan Anda */
-  </style>
-  
+  }
+};
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(200, 0, 0), white) /* Warna merah */
+}
+
+.content {
+  text-align: center;
+  color: #fff; /* Warna teks putih */
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.option {
+  background-color:  rgb(200, 0, 0);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color:  rgb(500, 0, 0);
+}
+</style>

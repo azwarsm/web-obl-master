@@ -16,7 +16,7 @@
     <div class="table-cell"><a href="file1.pdf" target="_blank">File 1</a></div>
     <div class="table-cell">
       <button class="btn-update">Update</button>
-      <button class="btn-delete">Delete</button>
+      <button class="btn-delete">Delete</button>  
     </div>
   </div>
   <div class="table-row">
@@ -77,14 +77,6 @@
   </div>
   <div class="table-row">
     <div class="table-cell">KL/WC</div>
-    <div class="table-cell"><a href="file1.pdf" target="_blank">File 1</a></div>
-    <div class="table-cell"> 
-      <button class="btn-update">Update</button>
-      <button class="btn-delete">Delete</button>
-    </div>
-  </div>
-  <div class="table-row">
-    <div class="table-cell">Mitra OBL</div>
     <div class="table-cell"><a href="file1.pdf" target="_blank">File 1</a></div>
     <div class="table-cell"> 
       <button class="btn-update">Update</button>
